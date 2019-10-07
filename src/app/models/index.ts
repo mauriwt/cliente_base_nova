@@ -1,0 +1,2 @@
+
+export {Documento} from './Documento';

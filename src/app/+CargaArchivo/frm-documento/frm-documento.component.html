@@ -1,0 +1,46 @@
+<form #f id="frmBuscar" [formGroup]="formulario">
+    <div class="form-row">
+        <div class="form-group col-lg-12">
+            <fieldset>
+                <label for="tipoDocumento">
+                    <b>Tipo de documento:
+                        <b class="text text-danger">*</b>
+                    </b>
+                </label>
+                <select id="tipoDocumento" class="form-control" formControlName="tipoDocumento">
+                    <option *ngFor="let item of listaFuerzaVenta; let i = index" [value]="item.Codigo">
+                        {{item.Nombre}}
+                    </option>
+                </select>
+            </fieldset>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-lg-12">
+            <fieldset>
+                <label for="file">
+                    <b>Subir documento pdf :
+                        <label class="text-danger">*</label>
+                    </b>
+                </label>
+                <div class="form-group">
+                    <input id="file" formControlName="file" (change)="setArchivo($event)" type="file" accept=".pdf">
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-lg-12">
+            <fieldset>
+                <label for="descripcion">
+                    <b>Descripción:
+                    </b>
+                </label>
+                <textarea class="form-control" formControlName="descripcion" id="descripcion" rows="5"></textarea>
+            </fieldset>
+        </div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="guardar()">Guardar</button>
+    <a class="btn btn-danger" (click)="cancelar()">Cancelar</a>
+</form>

@@ -1,0 +1,209 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.loading {
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 50px;
+    height: 50px
+}
+
+.loading span {
+    display: block;
+    position: absolute;
+    border-radius: 5px;
+    width: 50%;
+    height: 50%
+}
+
+.loading span:nth-child(1) {
+    top: 0;
+    left: 0;
+    background-color: rgba(66, 133, 244, 1.75);
+    animation: move1 1s linear infinite
+}
+
+.loading span:nth-child(2) {
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 1.75);
+    animation: move2 1s linear infinite
+}
+
+.loading span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    background-color: rgba(244, 180, 0, 1.75);
+    animation: move3 1s linear infinite
+}
+
+@keyframes move1 {
+    0% {
+        transform: translate(0);
+        z-index: 10
+    }
+    25% {
+        transform: translate(100%, 0)
+    }
+    50% {
+        transform: translate(100%, 100%)
+    }
+    75% {
+        transform: translate(0, 100%);
+        z-index: 0
+    }
+    100% {
+        transform: translate(0)
+    }
+}
+
+@keyframes move2 {
+    0% {
+        transform: translate(0)
+    }
+    25% {
+        transform: translate(0, 100%)
+    }
+    50% {
+        transform: translate(-100%, 100%);
+        z-index: 0
+    }
+    75% {
+        transform: translate(-100%, 0);
+        z-index: 10
+    }
+    100% {
+        transform: translate(0)
+    }
+}
+
+@keyframes move3 {
+    0% {
+        transform: translate(0)
+    }
+    25% {
+        transform: translate(0, -100%);
+        z-index: 10
+    }
+    50% {
+        transform: translate(100%, -100%)
+    }
+    75% {
+        transform: translate(100%, 0)
+    }
+    100% {
+        transform: translate(0);
+        z-index: 0
+    }
+}
+
+@keyframes move4 {
+    0% {
+        transform: translate(0)
+    }
+    25% {
+        transform: translate(-100%, 0);
+        z-index: 0
+    }
+    50% {
+        transform: translate(-100%, -100%);
+        z-index: 10
+    }
+    75% {
+        transform: translate(0, -100%)
+    }
+    100% {
+        transform: translate(0)
+    }
+}
+
+.nova-loading {
+    position: fixed;
+    z-index: 999;
+    height: 2em;
+    width: 2em;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0
+}
+
+.nova-loading:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3)
+}
+
+.ajs-message.ajs-info {
+    color: #000000;
+    background-color: #5fbefd;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.ajs-message.ajs-ok {
+    color: #000000;
+    background-color: #355dfe;
+    border-color: #31708f;
+    border-radius: 10px;
+}
+
+.ajs-message.ajs-alerta {
+    color: #000000;
+    background-color: #ee9f1e;
+    border-color: #999;
+    border-radius: 10px;
+}
+
+.ajs-message.ajs-falla {
+    color: #000000;
+    background-color: #e62f62;
+    border-color: #999;
+    border-radius: 10px;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: #483ee4;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-bar{
+    background-color: rgba(49, 60, 202, 0.54);
+}
+
+.info-buscar{
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #498eee;
+  }
+  .info-buscar p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .success-snackbar{
+    background-color: #afb0a8;
+}
+
+.mayuscula {
+    text-transform: uppercase;
+    }
+.cdk-overlay-container{
+    z-index: 2000;
+} .cdk-global-overlay-wrapper {
+    z-index: 2000;
+} .cdk-overlay-pane{
+    z-index: 2000;
+}
+.dx-header-row{
+    background-color:#1f71b7;
+    color: #ffffff;
+    font-weight: bold;
+}
