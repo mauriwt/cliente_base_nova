@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Ckeckout Code') {
       steps {
-        git(url: 'https://github.com/mauriwt/cliente_base_nova', branch: 'master')
+        git(url: 'https://github.com/mauriwt/jenkins-project', branch: 'main')
       }
     }
 
